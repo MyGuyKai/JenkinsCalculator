@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "YourDockerUser/my_java_application"
+    registry = "kaiw8/jenkinscalc"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -78,7 +78,7 @@ pipeline {
 
       post {
           failure {
-              mail to: 'AnEmail@gmail.com',
+              mail to: 'kaimweight@gmail.com',
               subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
               body: "Something is wrong with ${env.BUILD_URL}"
           }
